@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_fragment_one_to_fragment_two"
             app:destination="@id/fragment_two" />
+
     </fragment>
     <fragment
         android:id="@+id/fragment_two"
@@ -23,6 +24,9 @@
             android:id="@+id/action_fragment_two_to_fragment_three"
             app:destination="@id/fragment_three"
             app:popUpTo="@id/fragment_one" />
+        <argument
+            android:name="name"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/fragment_three"

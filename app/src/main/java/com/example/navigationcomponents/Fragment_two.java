@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +20,8 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class Fragment_two extends Fragment {
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,6 +73,11 @@ public class Fragment_two extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        String name = Fragment_twoArgs.fromBundle(getArguments()).getName();
+        TextView frag1Data = view.findViewById(R.id.frag1Data);
+
+        frag1Data.setText(name);
 
         NavController navController = Navigation.findNavController(view);
         Button button = view.findViewById(R.id.frag3Btn);
